@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Nazmi Website</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+		header h1::after {
+			content: 'Nazmi - My Personal Website';
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background-image: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #00ffff, #0080ff, #8000ff, #ff00ff);
+			background-size: 200% 200%;
+			color: transparent;
+			-webkit-background-clip: text;
+			animation: rainbowText 5s linear infinite;
+		}
+
+		@keyframes rainbowText {
+			0% { background-position: 0% 50%; }
+			100% { background-position: 200% 50%; }
+		}
+	</style>
+</head>
+
+<body>
+	<div class="menu-icon">&#9776;</div>
+	
+	<div id="audio-container">
+		<audio controls autoplay loop>
+			<source src="videos/SweetsParadise.mp3" type="audio/mp3">
+		</audio>
+	</div>
+
+    <header>
+        <img src="images/header.jpg" alt="Header">
+        <h1>Nazmi - My Personal Website</h1>
+        <p>The Biography of the Person Behind the Scene, the Tale of Tales, and the Mystery of the Doubts</p>
+    </header>
+
+    <section>
+        <h2>Hello World!</h2>
+        <p>Assalamualaikum & Hi folks!</p>
+		<div><p>If this is your first time around, <b><font color="cyan">Welcome to my Personal Website!</font></b> 
+		Both mobile and desktop friendly!</p></div> 
+		<marquee behavior="scroll" direction="left" scrollamount="5">
+			<div><p><b><font color="orange">♪♫.ılılıll|̲̅̅●̲̅̅|̲̅̅= Music Is Playing =̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪</font></b></p></div>
+		</marquee>
+		<div><p>Feel free to surf around :) <i>PS: Since most modern browser have policies that prevent audio from autoplaying in the background, 
+		I provided an audio player above. Please manualy click on the player if its empty and silent. Tq.</i></p></div>
+		<div><p>You can also skip the slides and video by clicking the <b><font color="red"><span class="bouncing-text">"About Me"</span></font></b> button at the Navigation Menu, 
+		it will directly send you the about me section</p></div>
+	</section>
+
+	<section class="slideshow-container">
+		<div class="slide">
+			<img src="images/image26.jpg" alt="Slide 1">
+		</div>
+		<div class="slide">
+			<img src="images/image10.jpg" alt="Slide 2">
+		</div>
+		<div class="slide">
+			<img src="images/image27.jpg" alt="Slide 3">
+		</div>
+	</section>
+	
+	<div id="video-container">
+		<video controls>
+			<source src="videos/video1.mp4" type="video/mp4">
+		</video>
+	</div>
+
+    <div class="container">
+        <div id="left-column">
+            <div id="clock-box">
+                <div id="clock"></div>
+            </div>
+		</div>
+	
+		<div id="middle-column">
+			<section id="aboutme">
+				<h2>About Me</h2>
+				<p>Greetings! My name is <font color="gold"><b>Mohammad Nazmi bin Khairuzzaman Mandadi</b></font> and this is where I share the remarkable journey of myself, 
+				a 21-year-old individual whose life has been a tapestry of experiences, growth, and meaningful accomplishments. 
+				Born on 11th August 2003, I embarked on a unique path that has shaped me into the person I am today. 
+				<i>(and yes the video is not a recent one</i> <b>:/</b> 
+				<i>I don't have time editing a new one, plus i'm not good at looking infront of a camera)</i></p>
+				<p>From my early life experiences up until now, I has navigated the twists and turns of life with sadness and tragedy. 
+				From an early age of traumatizing experience that can be learned from to the sweet and sour of growing as a teenager. 
+				As you delve into this personal website, you<i>(especialy Sir Firdaus)</i> will discover the tapestry of my life, 
+				woven with threads of resilience, passion, and the pursuit of achieving my life goal.</p>
+				<p>You can lean more depth into my life by jumping to the next pages, <b><font color="dark purple"><span class="bouncing-text">"Education"</span></font></b> 
+				at the beautifuly made Navigation Menu. <i>PS: Send me a msg on your thoughts about this website! Looking forward to it. wink wink</i> ; )</p>
+			</section>
+			
+			<section id="contact">
+				<h2>Contact</h2>
+				<p>Feel free to reach out to me!</p>
+				<form action="https://formspree.io/f/mzblnylq" method="post">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required><br>
+
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required><br>
+
+					<label for="message">Message:</label>
+					<input id="message" name="message" required></input><br>
+
+					<input type="submit" value="Submit">
+				</form>
+			</section>
+		</div>
+		
+		<div id="right-column">
+		</div>
+	</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#aboutme">About Me</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="friend.html">Friend</a>
+        <a href="work.html">Work Experience</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="personal.html">Personal Interest</a>
+        <a href="important.html">Important Momment</a>
+    </nav>
+
+    <footer>
+        <p>&copy;2023 UiTM IML254. All rights reserved. | My Personal Website |</p> 
+    </footer>
+	
+	<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3500);
+    	}
+	</script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const menuIcon = document.querySelector('.menu-icon');
+			const nav = document.querySelector('nav');
+
+			menuIcon.addEventListener('click', function () {
+				nav.classList.toggle('active');
+			});
+		});
+	</script>
+
+	<script>
+		function updateClock() {
+			const now = new Date();
+			const hours = now.getHours().toString().padStart(2, '0');
+			const minutes = now.getMinutes().toString().padStart(2, '0');
+			const seconds = now.getSeconds().toString().padStart(2, '0');
+			
+			// Get day, month, and year
+			const day = now.getDate().toString().padStart(2, '0');
+			const month = (now.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+			const year = now.getFullYear();
+
+			// Format the date as DD/MM/YYYY
+			const dateStr = `${day}/${month}/${year}`;
+
+			document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}  ${dateStr}`;
+		}
+
+		setInterval(updateClock, 1000);
+		updateClock();
+	</script>
+
+</body>
+</html>
