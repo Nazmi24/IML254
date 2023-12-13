@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend - Nazmi Website</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+		header h1::after {
+			content: 'Nazmi - Friends';
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background-image: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #00ffff, #0080ff, #8000ff, #ff00ff);
+			background-size: 200% 200%;
+			color: transparent;
+			-webkit-background-clip: text;
+			animation: rainbowText 5s linear infinite;
+		}
+
+		@keyframes rainbowText {
+			0% { background-position: 0% 50%; }
+			100% { background-position: 200% 50%; }
+		}
+    </style>
+</head>
+
+<body>
+	<div class="menu-icon">&#9776;</div>
+	
+	<div id="audio-container">
+		<audio controls autoplay loop>
+			<source src="videos/SweetsParadise.mp3" type="audio/mp3">
+		</audio>
+	</div>
+
+    <header>
+        <img src="images/header3.jpg" alt="Header">
+        <h1>Nazmi - Friends</h1>
+        <p>Friends and Keen</p>
+    </header>
+
+	<marquee behavior="scroll" direction="left" scrollamount="10">
+		<div><p><b><font color="pink">♪♫.ılılıll|̲̅̅●̲̅̅|̲̅̅= Music Is Playing =̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪</font></b></p></div>
+	</marquee>
+
+    <div class="container">
+        <div id="left-column">
+            <div id="clock-box">
+                <div id="clock"></div>
+            </div>
+		</div>
+	
+		<div id="middle-column">
+			<section>
+				<h2>My <font color="yellow">Top 3</font> Friends</h2>
+				
+				<div class="friend-card">
+					<img src="images/image34.jpg" alt="Friend 1">
+					<div class="friend-info">
+						<h3>Afiq Adli</h3>
+						<p>Best buddy since high school. I begin socializing and knowing other people through him, <font color="green"><b>"a friend of a friend"</b></font> they said</p>
+					</div>
+				</div>
+
+				<div class="friend-card">
+					<img src="images/image30.png" alt="Friend 2">
+					<div class="friend-info">
+						<h3>Alleya Mysarrah</h3>
+						<p>Travel enthusiast and coffee lover. Always up for an adventure and problem causing. Pretty much rely on others when it come to educations but regardless very <font color="blue"><b>clumssy</b></font>... that why we like her</p>
+					</div>
+				</div>
+				
+				<div class="friend-card">
+					<img src="images/image31.jpg" alt="Friend 2">
+					<div class="friend-info">
+						<h3>Syaqif</h3>
+						<p>Smart and intelligence, did I already mention smart? Finally someone to rely on. I used to call him "syafiq" unintentionally. Worth mention, he is also active in <font color="red"><b>sports</b></font></p>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<div id="right-column">
+		</div>
+	</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#aboutme">About Me</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="friend.html">Friend</a>
+        <a href="work.html">Work Experience</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="personal.html">Personal Interest</a>
+        <a href="important.html">Important Moment</a>
+    </nav>
+
+    <footer>
+        <p>&copy;2023 UiTM IML254. All rights reserved. | My Personal Website |</p>
+    </footer>
+	
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.menu-icon');
+            const nav = document.querySelector('nav');
+
+            menuIcon.addEventListener('click', function () {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+
+	<script>
+		function updateClock() {
+			const now = new Date();
+			const hours = now.getHours().toString().padStart(2, '0');
+			const minutes = now.getMinutes().toString().padStart(2, '0');
+			const seconds = now.getSeconds().toString().padStart(2, '0');
+			
+			// Get day, month, and year
+			const day = now.getDate().toString().padStart(2, '0');
+			const month = (now.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+			const year = now.getFullYear();
+
+			// Format the date as DD/MM/YYYY
+			const dateStr = `${day}/${month}/${year}`;
+
+			document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}  ${dateStr}`;
+		}
+
+		setInterval(updateClock, 1000);
+		updateClock();
+	</script>
+
+</body>
+</html>

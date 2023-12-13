@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Nazmi Website</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<div class="menu-icon">&#9776;</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#aboutme">About Me</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="friend.html">Friend</a>
+        <a href="work.html">Work Experience</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="personal.html">Personal Interest</a>
+        <a href="important.html">Important Momment</a>
+    </nav>
+
+    <header>
+        <img src="images/Pizza.jpg" alt="Header">
+        <h1>Nazmi - My Personal Website</h1>
+        <p>The Biography of the Person Behind the Scene, the Tale of Tales, and the Mystery of the Doubts</p>
+    </header>
+
+    <section>
+        <h2>Hello!</h2>
+        <p>Assalamualaikum and hi! Welcome to my Personal Website! Feel free to surf around :)</p>
+    </section>
+
+	<section class="slideshow-container">
+		<div class="slide">
+			<img src="images/Pizza1.avif" alt="Slide 1">
+		</div>
+		<div class="slide">
+			<img src="images/Pizza2.jpeg" alt="Slide 2">
+		</div>
+		<div class="slide">
+			<img src="images/Pizza3.webp" alt="Slide 3">
+		</div>
+	</section>
+
+	<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3500);
+    	}
+	</script>
+
+	<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuIcon = document.querySelector('.menu-icon');
+        const nav = document.querySelector('nav');
+
+        menuIcon.addEventListener('click', function () {
+            nav.classList.toggle('active');
+        });
+    });
+	</script>
+
+    <section id="aboutme">
+        <h2>About Me</h2>
+        <p>Greetings! My name is Mohammad Nazmi bin Khairuzzaman Mandadi and this is where I share the remarkable journey of myself, a 21-year-old individual whose life has been a tapestry of experiences, growth, and meaningful accomplishments. Born on 11th August 2003, I embarked on a unique path that has shaped me into the person I am today.</p>
+		<p>From my early life experiences up until now, I has navigated the twists and turns of life with sadness and tragedy. From an early age of traumatizing experience that can be learned from to the sweet and sour of growing as a teenager. As you delve into this personal website, you(who ever you are) will discover the tapestry of my life, woven with threads of resilience, passion, and the pursuit of achieving my life goal.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me!</p>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message:</label>
+            <input id="message" name="message" required></input><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy;2023 UiTM IML254. All rights reserved. | My Personal Website |</p> 
+    </footer>
+</body>
+</html>

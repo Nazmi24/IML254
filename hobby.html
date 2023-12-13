@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby - Nazmi Website</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+		header h1::after {
+			content: 'Nazmi - Hobby';
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background-image: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #00ffff, #0080ff, #8000ff, #ff00ff);
+			background-size: 200% 200%;
+			color: transparent;
+			-webkit-background-clip: text;
+			animation: rainbowText 5s linear infinite;
+		}
+
+		@keyframes rainbowText {
+			0% { background-position: 0% 50%; }
+			100% { background-position: 200% 50%; }
+		}
+    </style>
+</head>
+
+<body>
+    <div class="menu-icon">&#9776;</div>
+	
+	<div id="audio-container">
+		<audio controls autoplay loop>
+			<source src="videos/SweetsParadise.mp3" type="audio/mp3">
+		</audio>
+	</div>
+
+    <header>
+        <img src="images/header5.jpeg" alt="Header">
+        <h1>Nazmi - Hobby</h1>
+        <p>Discover My Leisure Time Activities</p>
+    </header>
+
+	<marquee behavior="scroll" direction="left" scrollamount="10">
+		<div><p><b><font color="darkgreen">♪♫.ılılıll|̲̅̅●̲̅̅|̲̅̅= Music Is Playing =̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪</font></b></p></div>
+	</marquee>
+
+    <video controls autoplay loop>
+        <source src="videos/video5.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <div id="left-column">
+            <div id="clock-box">
+                <div id="clock"></div>
+            </div>
+		</div>
+	
+		<div id="middle-column">
+			<section class="masonry">
+				<div class="hobby-block">
+					<img class="hobby-img" src="images/image32.jpg" alt="Hobby 1">
+					<div class="hobby-content">
+						<h2>Baking</h2>
+						<p>My first <font color="blue"><b><span class="bouncing-text">CAKE!</span></b></font></p>
+						<font color="blue"><b>Blueberry Cheesecake</b></font>
+						<li>Blueberry</li>
+						<li>Cream Cheese</li>
+						<li>Sour Cream</li>
+						<li>Galatine</li>
+						<li>Oreo</li>
+					</div>
+				</div>
+
+				<div class="hobby-block">
+					<img class="hobby-img" src="images/image38.jpg" alt="Hobby 2">
+					<div class="hobby-content">
+						<h2>Photography</h2>
+						<p>Pretty shocking right?</p>
+						<p>Happend to encounter such <font color="orange"><b>scenery in the evening</b></font></p>
+						<p>I also love drawing medieval themed comic and figures</p>
+					</div>
+				</div>
+
+				<div class="hobby-block">
+					<img class="hobby-img" src="images/image39.png" alt="Hobby 3">
+					<div class="hobby-content">
+						<h2>Gaming</h2>
+						<p>Yes obviously ;) game reco: <font color="red"><b>Kingdom Two Crown</b></font></p>
+						<p>A resource managment survival game, support 2 player gameplay<i>(that where the name came from)</i></p>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<div id="right-column">
+		</div>
+	</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#aboutme">About Me</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="friend.html">Friend</a>
+        <a href="work.html">Work Experience</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="personal.html">Personal Interest</a>
+        <a href="important.html">Important Moment</a>
+    </nav>
+
+    <footer>
+        <p>&copy;2023 UiTM IML254. All rights reserved. | My Personal Website |</p> 
+    </footer>
+	
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.menu-icon');
+            const nav = document.querySelector('nav');
+
+            menuIcon.addEventListener('click', function () {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+
+	<script>
+		function updateClock() {
+			const now = new Date();
+			const hours = now.getHours().toString().padStart(2, '0');
+			const minutes = now.getMinutes().toString().padStart(2, '0');
+			const seconds = now.getSeconds().toString().padStart(2, '0');
+			
+			// Get day, month, and year
+			const day = now.getDate().toString().padStart(2, '0');
+			const month = (now.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+			const year = now.getFullYear();
+
+			// Format the date as DD/MM/YYYY
+			const dateStr = `${day}/${month}/${year}`;
+
+			document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}  ${dateStr}`;
+		}
+
+		setInterval(updateClock, 1000);
+		updateClock();
+	</script>
+
+</body>
+</html>

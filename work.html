@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience - Nazmi Website</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+		header h1::after {
+			content: 'Nazmi - Work Experience';
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background-image: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #00ffff, #0080ff, #8000ff, #ff00ff);
+			background-size: 200% 200%;
+			color: transparent;
+			-webkit-background-clip: text;
+			animation: rainbowText 5s linear infinite;
+		}
+
+		@keyframes rainbowText {
+			0% { background-position: 0% 50%; }
+			100% { background-position: 200% 50%; }
+		}
+    </style>
+</head>
+
+<body>
+    <div class="menu-icon">&#9776;</div>
+	
+	<div id="audio-container">
+		<audio controls autoplay loop>
+			<source src="videos/SweetsParadise.mp3" type="audio/mp3">
+		</audio>
+	</div>
+
+    <header>
+        <img src="images/header4.jpg" alt="Header">
+        <h1>Nazmi - Work Experience</h1>
+        <p>My Profession and Experiences.</p>
+    </header>
+
+	<marquee behavior="scroll" direction="left" scrollamount="10">
+		<div><p><b><font color="red">♪♫.ılılıll|̲̅̅●̲̅̅|̲̅̅= Music Is Playing =̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪</font></b></p></div>
+	</marquee>
+
+    <div class="container">
+        <div id="left-column">
+            <div id="clock-box">
+                <div id="clock"></div>
+            </div>
+		</div>
+	
+		<div id="middle-column">
+			<section>
+				<h2>Work Experience</h2>
+
+				<div class="resume-card">
+					<div class="resume-info">
+						<h3>Computer Operator</h3>
+						<p>Waheedah Resources Sdn Bhd</p>
+						<p>Jan 2007 - Dec 2016</p>
+						<p>Responsibilities:</p>
+						<ul>
+							<li>Installed, modified, and repaired software and hardware to resolve technical issues.</li>
+							<li>Provided basic end-user troubleshooting and desktop support.</li>
+							<li>Managed program errors with analytical approach focused on troubleshooting, diagnosing and resolving each problem.</li>
+							<li>Analyzed user requirements and developed solutions to meet needs.</li>
+							<li>Implemented and maintained software solutions according to customer requirements.</li>
+							<li>Followed work orders precisely to identify equipment needed, materials required and sequences to correctly completing assignments.</li>
+							<li>Reacted calmly during times of highly stressed or emergency situations.</li>
+							<li>Documented discrepancies, referring discovered issues to supervisor for remediation.</li>
+							<li>Maintained spreadsheets of data across multiple systems.</li>
+							<li>Retrieved information and performed data entry using appropriate computer programs.</li>
+							<li>Generated reports covering details about data, system operation, and error monitoring.</li>
+						</ul>
+						<p>Skills:</p>
+						<ul>
+							<li>Basic computerizing.</li>
+							<li>Anti-virus and patching works.</li>
+							<li>Problem-solving and analytical.</li>
+						</ul>
+						<p>Achievements:</p>
+						<ul>
+							<li>Fixing and patching viruses and successfuly retriving important data from the devices.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="resume-card">
+					<div class="resume-info">
+						<h3>Pizza Maker</h3>
+						<p>Pizza Hut</p>
+						<p>Feb 2020 - August 2020</p>
+						<p>Responsibilities:</p>
+						<ul>
+							<li>Operated pizza oven and other kitchen equipment safely to protect team members from harm and equipment from damage.</li>
+							<li>Reduced customer waiting by batch cooking popular items during rush times.</li>
+							<li>Trained and assisted new kitchen staff members.</li>
+							<li>Followed company recipes and production standards to satisfy customers.</li>
+							<li>Restocked inventory and ingredient items to maintain optimal kitchen efficiency.</li>
+							<li>Contributed to consistent customer satisfaction rating by producing high-quality food and providing timely service.</li>
+							<li>Cleaned and sanitized work areas, utensils and equipment.</li>
+							<li>Packaged, arranged and labeled ingredient stock, storing at established temperatures.</li>
+							<li>Received and stored food supplies, raw materials and other ingredients.</li>
+							<li>Provided excellent customer service by taking orders, answering questions and responding to customer complaints. </li>
+							<li>Tracked inventory of ingredients and supplies to keep kitchen well stocked and meet product and service demands.</li>
+							<li>Learned and memorized menu items and specials to provide accurate and up-todate information to kitchen staff.</li>
+							<li>Maintained pizza-making and kitchen equipment to keep items in good working condition and kitchen operating smoothly.</li>
+						</ul>
+						<p>Skills:</p>
+						<ul>
+							<li>Pizzas and side dishes making.</li>
+							<li>Fast learner.</li>
+							<li>Food art.</li>
+						</ul>
+						<p>Achievements:</p>
+						<ul>
+							<li>Customer satisfication throughout the food preparation.</li>
+							<li>One man jobs, single handled a dificult works and multitasking to achieve peake hour.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<div id="right-column">
+		</div>
+	</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#aboutme">About Me</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="friend.html">Friend</a>
+        <a href="work.html">Work Experience</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="personal.html">Personal Interest</a>
+        <a href="important.html">Important Moment</a>
+    </nav>
+
+    <footer>
+        <p>&copy;2023 UiTM IML254. All rights reserved. | My Personal Website |</p> 
+    </footer>
+	
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.menu-icon');
+            const nav = document.querySelector('nav');
+
+            menuIcon.addEventListener('click', function () {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+
+	<script>
+		function updateClock() {
+			const now = new Date();
+			const hours = now.getHours().toString().padStart(2, '0');
+			const minutes = now.getMinutes().toString().padStart(2, '0');
+			const seconds = now.getSeconds().toString().padStart(2, '0');
+			
+			// Get day, month, and year
+			const day = now.getDate().toString().padStart(2, '0');
+			const month = (now.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+			const year = now.getFullYear();
+
+			// Format the date as DD/MM/YYYY
+			const dateStr = `${day}/${month}/${year}`;
+
+			document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}  ${dateStr}`;
+		}
+
+		setInterval(updateClock, 1000);
+		updateClock();
+	</script>
+
+</body>
+</html>

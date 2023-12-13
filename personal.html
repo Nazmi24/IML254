@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Moment - Nazmi Website</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+		header h1::after {
+			content: 'Nazmi - Personal Interest';
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background-image: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #00ffff, #0080ff, #8000ff, #ff00ff);
+			background-size: 200% 200%;
+			color: transparent;
+			-webkit-background-clip: text;
+			animation: rainbowText 5s linear infinite;
+		}
+
+		@keyframes rainbowText {
+			0% { background-position: 0% 50%; }
+			100% { background-position: 200% 50%; }
+		}
+    </style>
+</head>
+
+<body>
+    <div class="menu-icon">&#9776;</div>
+	
+	<div id="audio-container">
+		<audio controls autoplay loop>
+			<source src="videos/SweetsParadise.mp3" type="audio/mp3">
+		</audio>
+	</div>
+
+    <header>
+        <img src="images/header6.jpeg" alt="Header">
+        <h1>Nazmi - Personal Interest</h1>
+        <p>This is Personal</p>
+    </header>
+
+	<marquee behavior="scroll" direction="left" scrollamount="10">
+		<div><p><b><font color="green">♪♫.ılılıll|̲̅̅●̲̅̅|̲̅̅= Music Is Playing =̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪</font></b></p></div>
+	</marquee>
+
+    <div class="container">
+        <div id="left-column">
+            <div id="clock-box">
+                <div id="clock"></div>
+            </div>
+		</div>
+
+		<div id="middle-column">
+			<div class="split-container">
+				<section class="left-section">
+					<img src="images/image42.png" alt="Personal Interest 1">
+					<h2>Architecture</h2>
+					<p>Many people might not even thought that my main interest in life is architecture. 
+					It been a life dream for me to become an architect, drawing scheme for buildings, express creativity and being imaginative.
+					Despite everything, I let my path crave itself and follow with the flow of life's plan.</p>
+				</section>
+			</div>
+
+			<div>
+				<section class="right-section">
+					<img src="images/image41.png" alt="Personal Interest 2">
+					<h2>Thoughts</h2>
+					<p>I love hearing other people thoughts, understanding how they think and feel the world from thier lens scope.
+					One of the most interesting conversation I encounter is regarding consent age. 
+					Let say the conversation ended up one way.</p>
+				</section>
+			</div>
+		</div>
+		
+		<div id="right-column">
+		</div>
+	</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#aboutme">About Me</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="friend.html">Friend</a>
+        <a href="work.html">Work Experience</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="personal.html">Personal Interest</a>
+        <a href="important.html">Important Moment</a>
+    </nav>
+
+    <footer>
+        <p>&copy;2023 UiTM IML254. All rights reserved. | My Personal Website |</p> 
+    </footer>
+	
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.menu-icon');
+            const nav = document.querySelector('nav');
+
+            menuIcon.addEventListener('click', function () {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+
+	<script>
+		function updateClock() {
+			const now = new Date();
+			const hours = now.getHours().toString().padStart(2, '0');
+			const minutes = now.getMinutes().toString().padStart(2, '0');
+			const seconds = now.getSeconds().toString().padStart(2, '0');
+			
+			// Get day, month, and year
+			const day = now.getDate().toString().padStart(2, '0');
+			const month = (now.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+			const year = now.getFullYear();
+
+			// Format the date as DD/MM/YYYY
+			const dateStr = `${day}/${month}/${year}`;
+
+			document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}  ${dateStr}`;
+		}
+
+		setInterval(updateClock, 1000);
+		updateClock();
+	</script>
+
+</body>
+</html>
